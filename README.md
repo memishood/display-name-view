@@ -26,7 +26,7 @@ dependencies {
         android:layout_width="120dp"
         android:layout_height="120dp"
         app:displayName="Johnny Bravo"
-        app:textSize="11sp"
+        app:textSize="31sp"
         app:textColor="@color/white"
         app:backgroundColor="@color/purple_200"
         app:strokeWidth="6dp"
