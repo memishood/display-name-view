@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -85,9 +86,8 @@ public class DisplayNameView extends FrameLayout {
             textView.setTextColor(this.textColor);
         }
 
-
         if (this.textSize != -2) {
-            textView.setTextSize(this.textSize);
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, this.textSize);
         }
 
         if (this.displayName != null) {
