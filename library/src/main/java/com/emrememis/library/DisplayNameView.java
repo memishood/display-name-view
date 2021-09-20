@@ -91,8 +91,24 @@ public class DisplayNameView extends FrameLayout {
         }
 
         if (this.displayName != null) {
-            textView.setText(this.displayName);
+            String formattedDisplayName = generateDisplayName(this.displayName);
+            if (formattedDisplayName != null) {
+                textView.setText(formattedDisplayName);
+            }
         }
+    }
+
+    private String generateDisplayName(String name) {
+        String trim = name.trim();
+        if (!trim.isEmpty()) {
+            String[] words = trim.split(" ");
+            String displayName = String.valueOf(words[0].charAt(0));
+            if (words.length > 1) {
+                displayName += words[words.length - 1].charAt(0);
+            }
+            return displayName.toUpperCase();
+        }
+        return null;
     }
 
     public int getTextColor() {
